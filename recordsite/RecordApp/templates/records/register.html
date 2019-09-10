@@ -1,0 +1,105 @@
+9<html>
+
+<head>
+    <title>Records App</title>
+
+   
+    {% load static %}
+ 
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <script src=" {% static 'js/bootstrap.min.js' %} "></script>
+   
+    <!-- datatables link -->
+
+    <script src="{% static 'js/jquery.js' %}"></script>
+    <script src="{% static 'js/jquery.dataTables.min.js' %}"></script>
+    
+    <script src="{% static 'js/dataTables.bootstrap4.min.js' %}"></script>
+    <link rel="stylesheet" href="{% static 'css/RecordApp/student.css' %}">
+    <link rel="stylesheet" href="{% static 'css/dataTables.bootstrap4.min.css' %}">
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://code.jquery.com/jquery-3.3.1.js"/>
+    
+    <script type="text/javascript" src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
+    <script src="{% static 'js/RecordApp/register.js' %}"></script>
+ </head>
+
+<body>
+    <div class="container">
+        <div class="gutter">
+            <!-- Table to view Feature Request Details -->
+            <table class="display" id="Registration" cellspacing="0" style="width: 100%" >
+                <thead>
+                    <tr>
+                        <!-- <th>ID</th> -->
+                        <th>First Name</th>
+                        <th>Last Name</th>
+                        <th>Mobile Number</th>
+                        <th>City</th>
+                        <th>State</th>
+                        <th>Edit / Delete</th>                         
+                    </tr>
+                </thead>
+            </table>
+        </div>
+
+        <div class="form-group">
+            <div class="form-group">
+                 <input id="Show" type="button" onclick="add()" value="Add"  style="float: right;">
+            </div>
+            <div class="form-group">
+                <input id="Close" type="button" onclick="closeForm()" value="close"  style="float: right;">
+            </div>
+            <div class="center">
+                <div class="form-group">
+                            <div class="form-group">
+                                
+                                <label>FirstName</label>
+                                <input type="text" class="form-control" id="FirstName" placeholder="Enter FirstName" required>
+                            </div>
+                        </div>
+                <div class="form-group">
+                    <div class="form-group">
+                        
+                        <label>LastName</label>
+                        <input type="text" class="form-control" id="LastName" placeholder="Enter LastName" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="form-group">
+                        
+                        <label>Mobile</label>
+                        <input type="text" class="form-control" id="Mobile" placeholder="Enter Mobile number" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="form-group">
+                        
+                        <label>City</label>
+                        <input type="text" class="form-control" id="City" placeholder="Enter City" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="form-group">
+                        <label>State</label>
+                        <input type="text" class="form-control" id="State" placeholder="Enter State" required>
+                    </div>
+                    
+                </div>
+                <div class="form-group" style="display:none">
+                    <div class="form-group">
+                        <label>id</label>
+                        <input type="text" class="form-control" id="id" placeholder="id" required>
+                    </div>
+                    
+                </div>
+                <button class="btn btn-primary" onclick="register()">Submit</button>
+                <button class="btn btn-primary" onclick="Update()">Update</button>
+            </div>  
+
+</div>
+
+
+</body>
+</html>
